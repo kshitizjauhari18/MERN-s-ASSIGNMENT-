@@ -1,54 +1,210 @@
+/* ==================== CSS VARIABLES (:root) ==================== */
 :root {
-  --primary-color: #971731;
-  --bg-color: #f9f9f9;
+  --primary-color: #2c3e50;    /* Dark slate blue for professional tech club vibe */
+  --accent-color: #3498db;     /* Bright accent blue for interactive elements */
+  --accent-hover: #2980b9;     /* Darker blue for hover states */
+  --bg-color: #f4f6f8;         /* Clean light background */
+  --card-bg: #ffffff;          /* Card container background */
+  --text-color: #333333;       /* Main text color */
+  --text-light: #666666;       /* Subtext color */
+  --border-color: #dcdde1;     /* Border gray color */
+  --radius: 8px;               /* Standard rounded corners */
+}
+
+/* ==================== GLOBAL STYLES ==================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: var(--bg-color); 
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==================== HEADER & NAVIGATION ==================== */
+header {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+/* ==================== MAIN LAYOUT & SECTIONS ==================== */
+main {
+  flex: 1;
+  max-width: 900px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 p {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+/* Lists */
+main section ul {
+  margin-left: 1.5rem;
+  color: var(--text-light);
+}
+
+main section ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* ==================== TABLES ==================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+tbody tr:hover {
+  background-color: #f1f2f6;
+}
+
+tfoot td {
+  font-style: italic;
+  color: var(--text-light);
+  background-color: #f8f9fa;
+}
+
+/* ==================== FORMS & INPUTS ==================== */
+form div {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
   color: var(--primary-color);
 }
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    padding: var(--spacing);
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+input:focus, 
+select:focus, 
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
+input[type="radio"], 
+input[type="checkbox"] {
+  margin-right: 0.5rem;
 }
 
-h1 {
-    color: #2c3e50;
-    margin-bottom: 15px;
+/* ==================== BUTTONS ==================== */
+button[type="submit"] {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
 }
 
-.card {
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+button[type="submit"]:hover {
+  background-color: var(--accent-hover);
 }
 
-#hero {
-    text-align: center;
-    padding: 10px;
-    background-color: #156c89;
-    color: #ffffff;
-    border-radius: 5px;
+button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+footer p {
+  color: #bdc3c7;
+  margin: 0;
 }
