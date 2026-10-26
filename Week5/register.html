@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Task 4.4: Meta Tags -->
+  <meta name="description" content="Register for Tech Club - Join workshops and events.">
+  <meta name="author" content="Student Developer">
+  
+  <title>Tech Club | Register</title>
+
+  <!-- Task 4.4: Favicon -->
+  <link rel="icon" type="image/x-icon" href="register.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header>
+        <h1>Tech Club Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+        <section>
+            <h2>Student Registration Form</h2>
+
+            <!-- Task 4.1: Form with Name, Email, and Password using Labels -->
+            <form action="thankyou.html" method="GET">
+
+                <div>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+                </div>
+                <br>
+
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required placeholder="student@example.com">
+                </div>
+                <br>
+
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required placeholder="Create a password">
+                </div>
+                <br>
+                <!-- Date of Birth -->
+        <div>
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob">
+        </div>
+        <br>
+
+        <div>
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+        </div>
+        <br>
+
+        <div>
+          <label>Year Level:</label>
+          <input type="radio" id="freshman" name="year" value="freshman">
+          <label for="freshman">Freshman</label>
+          
+          <input type="radio" id="sophomore" name="year" value="sophomore">
+          <label for="sophomore">Sophomore</label>
+          
+          <input type="radio" id="junior" name="year" value="junior">
+          <label for="junior">Junior</label>
+        </div>
+        <br>
+
+        <div>
+          <label>Tech Interests:</label>
+          <input type="checkbox" id="webdev" name="interests" value="webdev">
+          <label for="webdev">Web Development</label>
+          
+          <input type="checkbox" id="ai" name="interests" value="ai">
+          <label for="ai">Artificial Intelligence</label>
+        </div>
+        <br>
+
+        <div>
+          <label for="track">Preferred Track:</label>
+          <select id="track" name="track">
+            <option value="frontend">Frontend Track</option>
+            <option value="backend">Backend Track</option>
+            <option value="fullstack">Full Stack Track</option>
+          </select>
+        </div>
+        <br>
+
+        <div>
+          <label for="bio">Why do you want to join?</label><br>
+          <textarea id="bio" name="bio" rows="4" cols="30" placeholder="Tell us a little about yourself..."></textarea>
+        </div>
+        <br>
+
+        <!-- Submit Button -->
+        <div>
+          <button type="submit">Register for Tech Club</button>
+        </div>
+
+            </form>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <p>&copy; 2026 Tech Club. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
